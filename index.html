@@ -8,6 +8,8 @@
 <meta property="og:title" content="Original Sin Is A Lie · Start Here">
 <meta property="og:description" content="For anyone who loves Jesus and has questions about the dogma. You were never broken.">
 <meta property="og:url" content="https://originalsinisalie.com">
+<meta property="og:image" content="https://originalsinisalie.com/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F6F0E6">
 <style>
   :root{
@@ -42,12 +44,18 @@
   .top a{color:var(--ink);text-decoration:none}
 
   /* book */
-  .book{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:center}
-  .cover{aspect-ratio:2/3;border-radius:4px 10px 10px 4px;background:var(--paper);position:relative;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -18px rgba(60,40,30,.35);padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between}
-  .cover::before{content:"";position:absolute;width:150%;aspect-ratio:1;left:-25%;top:28%;background:radial-gradient(circle,#F9D3A5 0%,#F7B7C6 28%,#D2BDF0 50%,rgba(181,214,242,.0) 70%);filter:blur(6px);opacity:.9}
-  .cover span{position:relative;font-family:var(--sans)}
-  .cover .t{font-weight:700;font-size:25px;line-height:1.02;letter-spacing:-.01em}
-  .cover .a{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .book{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
+  .cover{display:block;width:100%;height:auto;border-radius:3px 8px 8px 3px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 22px 44px -18px rgba(60,40,30,.4)}
+  .hero{margin:34px 0 0;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#cfd8c4}
+  .hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+  .es{display:flex;gap:16px;align-items:center;margin-top:26px;padding:14px;background:var(--paper);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--ink)}
+  .es:hover{border-color:var(--plum)}
+  .es img{width:64px;height:auto;flex:none;border-radius:2px;box-shadow:0 8px 18px -10px rgba(60,40,30,.45)}
+  .es h3{margin:2px 0 2px}
+  .es p{margin:0;font-size:15px;color:var(--soft)}
+  figure.plate{margin:0;padding:48px 0 8px}
+  figure.plate img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 22px 50px -26px rgba(40,30,60,.55)}
+  figure.plate figcaption{margin-top:12px;font-family:var(--sans);font-size:13px;color:var(--soft);line-height:1.5}
   .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
   .btn{display:inline-block;padding:12px 18px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
   .btn.solid{background:var(--ink);color:var(--paper)}
@@ -85,7 +93,8 @@
     body{font-size:18px}
     .wrap{padding-left:16px;padding-right:16px}
     .book{grid-template-columns:1fr;gap:26px}
-    .cover{width:62%;max-width:220px}
+    .cover{width:62%;max-width:240px}
+    .hero{aspect-ratio:1/1}
     .cards{grid-template-columns:1fr}
     .ideas li{padding-left:52px}
     .btn{flex:1 1 auto;text-align:center}
@@ -103,14 +112,12 @@
   <h1>You were never broken.</h1>
   <p class="lede">If someone sent you here, they probably care about you, and they probably know you've been sitting with some questions. That's a good sign.</p>
   <p>Nobody here is asking you to leave anything. Not your church, not your people, and definitely not Jesus. He's worth sincere contemplation. So are the questions. This page is a quiet place to start, with a book, its main ideas in plain language, and some good company for the road.</p>
+  <div class="hero"><img src="images/book-in-hand.jpg" alt="A hand holding a copy of Original Sin Is A Lie in front of a crape myrtle in full pink bloom" width="1400" height="1580"></div>
 </header>
 
 <section class="wrap" id="book">
   <div class="book">
-    <div class="cover" aria-hidden="true">
-      <span class="t">Original Sin Is A Lie</span>
-      <span class="a">Bob Peck</span>
-    </div>
+    <a href="https://amzn.to/3WFtHKr"><img class="cover" src="images/cover.jpg" alt="Cover of Original Sin Is A Lie by Bob Peck: a glowing orb of yellow, teal, violet and pink on white" width="640" height="959"></a>
     <div>
       <span class="label">The book</span>
       <h2>Original Sin Is A Lie</h2>
@@ -122,6 +129,14 @@
         <a class="btn" href="https://stan.store/bobpeck/p/osial">Digital bundle</a>
       </div>
       <p class="muted" style="font-size:15px;margin:14px 0 0">The digital bundle includes the ebook, the audiobook, the Spanish edition, and the study guide.</p>
+      <a class="es" href="https://www.amazon.com/dp/B0DRSF41FK" lang="es">
+        <img src="images/cover-es.jpg" alt="Portada de El Pecado Original Es Mentira" width="420" height="601">
+        <div>
+          <span class="label">También en español</span>
+          <h3>El Pecado Original Es Mentira</h3>
+          <p>Traducido por Marcelo S. Villaseñor, Bryan G. Olivas-Orozco y Alejandro Jiménez-Cuervo.</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -162,7 +177,11 @@
   </ol>
 </section>
 
-<section class="wrap" style="padding:20px 0">
+<section class="wrap" style="padding-top:20px;padding-bottom:20px">
+  <figure class="plate">
+    <img src="images/flammarion.jpg" alt="The Flammarion engraving: a pilgrim kneels at the edge of the world and pushes his head through the starry sky to see the wheels and fire beyond it" width="1080" height="848" loading="lazy">
+    <figcaption>The Flammarion engraving, from Camille Flammarion's <em>L'atmosphère</em> (1888). A pilgrim reaches the place where the sky meets the earth and looks through.</figcaption>
+  </figure>
   <blockquote>
     "It is we who have put our hands over our eyes and cry that it is dark!"
     <cite>Swami Vivekananda</cite>
