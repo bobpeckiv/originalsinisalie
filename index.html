@@ -11,102 +11,14 @@
 <meta property="og:image" content="https://originalsinisalie.com/images/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F6F0E6">
-<style>
-  :root{
-    --cream:#F6F0E6;
-    --paper:#FFFBF4;
-    --ink:#231F20;
-    --soft:#5E5650;
-    --plum:#5D3151;
-    --line:#E4DACB;
-    --aura:linear-gradient(90deg,#F7B7C6 0%,#F9D3A5 20%,#F6EDA4 40%,#BFE6C4 60%,#B5D6F2 80%,#D2BDF0 100%);
-    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
-    --serif:Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.6}
-  a{color:var(--plum);text-underline-offset:3px;text-decoration-thickness:1px}
-  a:hover{text-decoration-thickness:2px}
-  .wrap{max-width:720px;margin:0 auto;padding-left:20px;padding-right:20px}
-  .aura{height:6px;background:var(--aura);border-radius:3px}
-  h1,h2,h3,.label,.btn,nav{font-family:var(--sans)}
-  h1{font-weight:700;font-size:clamp(40px,9vw,64px);line-height:1.02;letter-spacing:-.02em;margin:18px 0 22px}
-  h2{font-weight:700;font-size:clamp(26px,5.5vw,34px);line-height:1.12;letter-spacing:-.01em;margin:0 0 14px}
-  h3{font-weight:700;font-size:19px;line-height:1.25;margin:0 0 6px}
-  p{margin:0 0 16px}
-  .label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--plum)}
-  .lede{font-size:21px;color:var(--ink)}
-  .muted{color:var(--soft)}
-  section{padding:56px 0;border-top:1px solid var(--line)}
-  header{padding:28px 0 56px}
-  .top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.02em}
-  .top a{color:var(--ink);text-decoration:none}
-
-  /* book */
-  .book{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
-  .cover{display:block;width:100%;height:auto;border-radius:3px 8px 8px 3px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 22px 44px -18px rgba(60,40,30,.4)}
-  .hero{margin:34px 0 0;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#cfd8c4}
-  .hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
-  .es{display:flex;gap:16px;align-items:center;margin-top:26px;padding:14px;background:var(--paper);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--ink)}
-  .es:hover{border-color:var(--plum)}
-  .es img{width:64px;height:auto;flex:none;border-radius:2px;box-shadow:0 8px 18px -10px rgba(60,40,30,.45)}
-  .es h3{margin:2px 0 2px}
-  .es p{margin:0;font-size:15px;color:var(--soft)}
-  figure.plate{margin:0;padding:48px 0 8px}
-  figure.plate img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 22px 50px -26px rgba(40,30,60,.55)}
-  figure.plate figcaption{margin-top:12px;font-family:var(--sans);font-size:13px;color:var(--soft);line-height:1.5}
-  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-  .btn{display:inline-block;padding:12px 18px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
-  .btn.solid{background:var(--ink);color:var(--paper)}
-  .btn:hover{background:var(--plum);border-color:var(--plum);color:var(--paper)}
-
-  /* ideas */
-  .ideas{list-style:none;margin:28px 0 0;padding:0;counter-reset:i}
-  .ideas li{counter-increment:i;position:relative;padding:22px 0 22px 56px;border-top:1px solid var(--line)}
-  .ideas li:first-child{border-top:0}
-  .ideas li::before{content:counter(i);position:absolute;left:0;top:20px;width:38px;height:38px;border-radius:50%;background:var(--aura);font-family:var(--sans);font-weight:700;font-size:16px;display:grid;place-items:center;color:var(--ink)}
-  .ideas p{margin:0;color:var(--soft)}
-  .ideas em{color:var(--ink)}
-
-  blockquote{margin:0;padding:34px 0;font-size:clamp(23px,4.6vw,29px);line-height:1.35;font-style:italic}
-  blockquote cite{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
-
-  /* cards */
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
-  .card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;text-decoration:none;color:var(--ink);transition:transform .15s ease,border-color .15s ease}
-  .card:hover{transform:translateY(-2px);border-color:var(--plum)}
-  .card .label{display:block;margin-bottom:8px}
-  .card p{margin:0;font-size:16px;line-height:1.5;color:var(--soft)}
-  .card.wide{grid-column:1 / -1}
-
-  .feature{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;overflow:hidden}
-  .feature::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--aura)}
-
-  footer{padding:44px 0 60px;border-top:1px solid var(--line);font-family:var(--sans);font-size:14px;color:var(--soft)}
-  footer p{margin:0 0 10px}
-  .social{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 22px;font-weight:700}
-  .social a{color:var(--ink);text-decoration:none}
-  .social a:hover{color:var(--plum)}
-
-  @media (max-width:600px){
-    body{font-size:18px}
-    .wrap{padding-left:16px;padding-right:16px}
-    .book{grid-template-columns:1fr;gap:26px}
-    .cover{width:62%;max-width:240px}
-    .hero{aspect-ratio:1/1}
-    .cards{grid-template-columns:1fr}
-    .ideas li{padding-left:52px}
-    .btn{flex:1 1 auto;text-align:center}
-  }
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
 <header class="wrap">
   <div class="top">
-    <a href="#">Original Sin Is A Lie</a>
-    <a href="https://bobpeck.io">by Bob Peck</a>
+    <a href="/">Original Sin Is A Lie</a>
+    <nav><a href="/verses/">Verses</a><a href="/words/">Words</a><a href="/read-the-bible/">Read the Bible</a><a href="/talking-with-family/">Family</a></nav>
   </div>
   <div class="aura" style="margin-top:18px"></div>
   <h1>You were never broken.</h1>
@@ -128,6 +40,7 @@
         <a class="btn" href="https://www.audible.com/pd/Original-Sin-Is-A-Lie-Audiobook/B0BF735TSJ">Audiobook, read by me</a>
         <a class="btn" href="https://stan.store/bobpeck/p/osial">Digital bundle</a>
       </div>
+      <a class="watch" href="https://www.instagram.com/reel/Deb-Hbdu6HX/" style="margin-top:18px"><div class="play"></div><div><b>Watch: what the title means</b><span>The lie is the doctrine, not the faith. A minute on why I named it this.</span></div></a>
       <p class="muted" style="font-size:15px;margin:14px 0 0">The digital bundle includes the ebook, the audiobook, the Spanish edition, and the study guide.</p>
       <a class="es" href="https://www.amazon.com/dp/B0DRSF41FK" lang="es">
         <img src="images/cover-es.jpg" alt="Portada de El Pecado Original Es Mentira" width="420" height="601">
@@ -155,26 +68,43 @@
       <p>The Greek word is <em>hamartia</em>, an archer's term. Not a permanent stain on the soul. You aimed, you missed, you aim again.</p>
     </li>
     <li>
-      <h3>Repent means change your mind.</h3>
-      <p>Jesus' word was <em>metanoia</em>, literally "beyond the mind." A call to see differently, not a sentence of lifelong shame.</p>
+      <h3><a href="/words/repent/">Repent means change your mind.</a></h3>
+      <p>The Gospels' word is <em>metanoia</em>, a change of mind. A call to see differently, not a sentence of lifelong shame.</p>
+      <a class="more" href="/words/repent/">Go deeper →</a>
     </li>
     <li>
       <h3>The kingdom is within you.</h3>
       <p>Luke 17:21. The Greek <em>entos</em> points inward. The kingdom isn't a place you get let into later. It's already here, underneath the noise.</p>
     </li>
     <li>
-      <h3>Hell has a history.</h3>
+      <h3><a href="/words/hell/">Hell has a history.</a></h3>
       <p>The word Jesus used most was <em>Gehenna</em>, a real valley outside Jerusalem with a dark past. The pitchforks and eternal torture came much later, from preachers and painters.</p>
+      <a class="more" href="/words/hell/">Go deeper →</a>
     </li>
     <li>
-      <h3>The Bible was gathered by people.</h3>
+      <h3><a href="/read-the-bible/">The Bible was gathered by people.</a></h3>
       <p>The earliest gospel was written about forty years after the crucifixion, and scholars agree on only seven of the letters signed by Paul. Knowing how the book was assembled can deepen faith rather than end it.</p>
+      <a class="more" href="/read-the-bible/">How to read it again →</a>
     </li>
     <li>
-      <h3>All paths can get you there.</h3>
+      <h3><a href="/verses/john-14-6/">All paths can get you there.</a></h3>
       <p>The mystics of every tradition, Christian, Hindu, Buddhist, Sufi, Jewish, Taoist, keep pointing at the same thing: that every being is equally Beloved, and nothing can separate us from The Divine.</p>
+      <a class="more" href="/verses/john-14-6/">But what about John 14:6? →</a>
     </li>
   </ol>
+</section>
+
+<section class="wrap" id="deeper">
+  <span class="label">Go deeper</span>
+  <h2>The questions people ask me most</h2>
+  <p class="muted">I've been answering these in my DMs for years. Now they live here.</p>
+  <div class="deep">
+    <a href="/verses/john-14-6/"><img src="/images/art/last-supper-durer.jpg" alt="" loading="lazy"><div><span class="label">Verse</span><h3>John 14:6</h3><p>"I am the way, the truth, and the life." The verse I get thrown at me most.</p></div></a>
+    <a href="/read-the-bible/"><img src="/images/art/jerome-durer.jpg" alt="" loading="lazy"><div><span class="label">Guide</span><h3>How to read the Bible again</h3><p>Where to start, which translation, and what to ask of every passage.</p></div></a>
+    <a href="/words/repent/"><img src="/images/art/prodigal-son-rembrandt.jpg" alt="" loading="lazy"><div><span class="label">Word</span><h3>Repent</h3><p>Not groveling. Turning around and coming home.</p></div></a>
+    <a href="/words/hell/"><img src="/images/art/last-judgment-bruegel.jpg" alt="" loading="lazy"><div><span class="label">Word</span><h3>Hell</h3><p>Three different words, one valley, and a lot of paintings.</p></div></a>
+    <a href="/talking-with-family/" style="grid-column:1/-1"><img src="/images/art/woman-of-samaria.jpg" alt="" loading="lazy" style="aspect-ratio:21/9;object-position:50% 40%"><div><span class="label">Guide</span><h3>Talking with family</h3><p>For when the people you love think you're lost.</p></div></a>
+  </div>
 </section>
 
 <section class="wrap" style="padding-top:20px;padding-bottom:20px">
