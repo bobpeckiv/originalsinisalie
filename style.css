@@ -159,3 +159,17 @@
     .short{font-size:18px;padding:18px 18px}
     .deep.three{grid-template-columns:1fr}
   }
+
+  /* v3: triptych + three columns */
+  .art.triptych .tri{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .art.triptych .tri img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px}
+  .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px}
+  .three-col>div{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 18px 8px}
+  .three-col .label{display:block;margin-bottom:10px}
+  .three-col p{margin:0 0 4px;font-size:16px;line-height:1.5;font-style:italic}
+  .three-col cite{display:block;margin:0 0 14px;font-family:var(--sans);font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--soft)}
+  @media (max-width:600px){
+    .three-col{grid-template-columns:1fr}
+    .art.triptych .tri{gap:6px}
+  }
+  .deep img{object-position:50% 18%}
